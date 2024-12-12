@@ -1,0 +1,227 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h3 class="nav-logo">Kelly</h3>
+      <div class="menu">
+        <h4 onclick="Showmenu()" class="open--menu">
+          <i class="fas fa-bars"></i>
+        </h4>
+
+        <ul class="nav-item" id="menu">
+          <li class="nav-links">Home</li>
+          <li class="nav-links">license</li>
+          <li class="nav-links">about me</li>
+          <li class="close" onclick="Hidemenu()">
+            <i class="fas fa-times"></i>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- 
+  😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊
+  😊       Keep coding happy!       😊
+  😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊
+ -->
+    <div class="container">
+      <section>
+        <h3  class="title">Welcome to the official page of <span>Dr.killy adams</span></h3>
+
+        <p  >
+          Dr. killy is a board-certified physician with over 15 years of
+          experience in family medicine. She is dedicated to providing
+          compassionate and personalized care to patients of all ages. Her
+          mission is to promote healthy living through education and advanced
+          medical practices.
+        </p>
+      </section>
+    </div>
+
+    <!-- 
+  😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊
+  😊     Resume                        😊
+  😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊
+ -->
+
+    <div class="resume">
+      <article class="resumeONe">
+        <div class="makeLine">
+          <p class="line2"></p>
+          <p class="line"></p>
+        </div>
+
+        <div class="resumecontain">
+          <h2>Kelly Adams</h2>
+          <h3 class="about--me">About Me</h3>
+          <h5>
+            I was born on 1 May 1995, and I am currently 30 years old. I hold a
+            <br />
+            Master’s degree and work as a freelancer, currently available for
+            <br />
+            projects. I live in New York, USA. You can visit my website at
+            <br />
+            www.example.com or contact me via phone at +123 456 7890 or email at
+            <br />
+            email@example.com.
+          </h5>
+
+          <h2>Sumary</h2>
+          <p>
+            Portland par 127,Orlando, FL <br />
+            (123) 456-7891 <br />
+            alice.barkley@example.com <br />
+          </p>
+        </div>
+      </article>
+
+      <article class="resumeTwo">
+        <div class="makeLine">
+          <p class="line2"></p>
+          <p class="line linetwomobile"></p>
+        </div>
+
+        <div class="resumecontain">
+          <h2>Education</h2>
+          <h3>Master of Fine Arts & Graphic Design 2015 - 2016</h3>
+
+          <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam</p>
+
+          <h3>Bachelor of Fine Arts & Graphic Design 2010 - 2014</h3>
+          <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae</p>
+
+          <h2>Professional Experience</h2>
+
+          <p>
+            Lead in the design, development, and implementation <br />
+
+            of the graphic, layout, and production communication <br />
+
+            materials <br />
+
+            Delegate tasks to the 7 members of the design team <br />
+
+            and provide counsel <br />
+
+            Oversee the efficient use of production project budgets<br />
+            ranging from $2,000 - $25,000
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <!-- 
+  😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊
+  😊    surgery                     😊
+  😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊
+ -->
+    <div class="surgery">
+      <h1>here some imgase of me doing surgery</h1>
+      <div class="surgeryImg">
+        <img
+          src="../img/gallery-1.jpg"
+          onclick="openModal(this)   "
+        />
+        <img src="../img/gallery-8.jpg" onclick="openModal(this)" />
+        <img src="../img/gallery-2.jpg" onclick="openModal(this)" />
+      </div>
+    </div>
+
+    <div id="imageModal" class="modal" onclick="closeModal()">
+      <img class="modal-content" id="modalImg" />
+    </div>
+    <!-- 
+  😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊
+  😊             appointment      😊
+  😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊
+ -->
+    <div class="appointment">
+      <article>
+        <h1>In an emergency? Need help now?</h1>
+        <p>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.
+        </p>
+        <button>Make an Appointment</button>
+      </article>
+    </div>
+
+    <!-- 
+  😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊
+  😊             appointment      😊
+  😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊
+ -->
+
+    <article class="contact">
+
+
+
+      <section class="contactone">
+        <p>
+          <span> <i class="fas fa-map-marker-alt"></i> </span> -Address: <span class="fix">
+             123 Main
+          Street, City
+          </span>
+        </p>
+        <p>
+          <span> <i class="fas fa-phone"></i> </span> -Phone:<span class="fix">  +1 234 567 890 </span> 
+        </p>
+        <p>
+          <span> <i class="fas fa-envelope"></i> </span> -Email:    <span class="fix">  info@example.com </span> 
+        </p>
+
+        <p>
+          <span> <i class="fab fa-facebook"></i> </span> -Facebook:    <span class="fix">  facebook@example.com </span> 
+        </p>    <p>
+          <span> <i class="fab fa-instagram"></i> </span> -Instagram:    <span class="fix">  instagram@example.com </span> 
+        </p>
+
+      </section>
+
+
+
+      <section class="contactwo">
+        <div class="contactdivone">
+          <input type="text" placeholder="Your Name " />
+          <input type="text" placeholder="Your Email " />
+        </div>
+        <div class="contactditwo">
+          <input type="text" placeholder="Your Phone " />
+          <input type="date" />
+        </div>
+        <textarea placeholder="Massege optional "></textarea>
+     
+        <button> contact  me now</button>
+      </section>
+
+
+
+    </article>
+
+    <!-- 
+  😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊
+  😊   finish                      😊
+  😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊
+ -->
+
+<div class="finish">
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+    <script src="js.js"></script>
+  </body>
+</html>

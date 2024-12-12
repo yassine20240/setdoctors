@@ -1,0 +1,611 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+:root {
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
+}
+
+:root {
+  --background-color: #f7f7f7; /* Background color for the entire website, including individual sections */
+  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #222222; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #34b7a7; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --nav-color: #444444;
+  --nav-hover-color: #34b7a7;
+  --nav-mobile-background-color: #ffffff;
+  --plm: 1rem;
+  --prm: 1rem;
+  ---plpc: 4rem;
+  ---prpc: 4rem;
+  /* الألوان الرئيسية */
+  --primary-blue: #5d9cec; /* يُستخدم للخلفية الرئيسية للعناصر مثل الهيدر أو الأزرار المهمة */
+  --secondary-green: #a8d5ba; /* يُستخدم لتفاصيل إضافية أو أزرار ثانوية */
+
+  /* الألوان الثانوية */
+  --background-white: #ffffff; /* خلفية أساسية للموقع أو أقسام النصوص */
+  --background-gray: #f5f5f5; /* خلفية للأقسام الفرعية أو البطاقات */
+  --accent-pink: #f8bbd0; /* تفاصيل صغيرة أو زينة لجعل التصميم جذاباً وودياً */
+
+  /* ألوان التنبيه والأزرار */
+  --button-green: #4caf50; /* الأزرار الإيجابية مثل "احجز الآن" */
+  --alert-red: #ff6f61; /* التنبيهات أو رسائل الخطأ */
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--default-color);
+}
+/* 
+   ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+   ❤️                                ❤️
+   ❤️   Made with Love and Passion   ❤️
+   ❤️                                ❤️
+   ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+*/
+.hidemenu {
+  position: absolute;
+  right: -1rem;
+}
+
+header {
+  padding-left: var(--plm);
+  padding-right: var(--prm);
+}
+
+.nav-logo,
+.open--menu {
+  font-size: 28px;
+}
+
+.nav-logo {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: var(--nav-font);
+  font-weight: 300;
+  color: var(--accent-color);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 4rem;
+  align-items: center;
+}
+
+ul li {
+  padding-top: 1.5rem;
+  text-align: center;
+  color: var(--background-color);
+  cursor: pointer;
+  font-family: var(--nav-font);
+}
+li::first-letter {
+  text-transform: uppercase;
+}
+li:hover {
+  color: var(--nav-hover-color);
+  transition: all 0.8s;
+}
+
+ul {
+  cursor: pointer;
+  position: absolute;
+  right: -40rem;
+  background: var(--accent-color);
+  width: 100%;
+}
+
+header {
+  background: var(--heading-color);
+}
+
+.close {
+  font-size: 28px;
+  padding-right: 34rem;
+  padding-left: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+  header {
+    padding-left: var(---plpc);
+    padding-right: var(---prpc);
+  }
+  /* body {
+    background: red;
+  } */
+  .close,
+  h4 {
+    display: none;
+  }
+  ul {
+    background: transparent;
+    position: static;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  ul li {
+    padding-top: 0rem;
+    text-align: start;
+  }
+  li:not(:first-child) {
+    padding-left: 3rem;
+  }
+}
+
+/* 
+   ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+   ❤️                                ❤️
+   ❤️   finsh the nav and start the container    ❤️
+   ❤️                                ❤️
+   ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+*/
+
+.container {
+  background-image: url(../img/hero-bg.jpg);
+  height: 90vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  padding-left: var(---plpc);
+  padding-right: var(---prpc);
+}
+
+section h3 {
+  font-size: 2rem;
+  color: var(--heading-color);
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+}
+section h3 span {
+  color: #34b7a7;
+}
+
+section p {
+  letter-spacing: 1px;
+  padding-top: 1rem;
+  line-height: 1.8rem;
+  color: #222222;
+}
+@media screen and (max-width: 600px) {
+  .container {
+    padding-left: var(--plm);
+    padding-right: var(--prm);
+  }
+}
+
+/* 
+   ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+   ❤️                                ❤️
+   ❤️    finish the container and start the section tow    ❤️
+   ❤️                                ❤️
+   ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+*/
+.makeLine {
+  position: absolute;
+  z-index: 100;
+}
+.line {
+  width: 3px;
+  background: #34b7a7;
+
+  border-radius: 3px;
+  height: 380px;
+  margin-left: 6px;
+}
+
+.line2 {
+  width: 15px;
+
+  border-radius: 50%;
+  border: var(--accent-pink) solid 1px;
+  border-radius: 50%;
+  height: 15px;
+}
+.line2:hover {
+  transition: all 0.9s;
+  background: var(--accent-color);
+}
+.resume {
+  padding: 4rem 0;
+  padding-left: var(---plpc);
+  padding-right: var(---prpc);
+
+  display: flex;
+  justify-content: space-between;
+
+  background: var(--background-gray);
+}
+
+.resumeONe {
+  display: flex;
+}
+.resumeTwo {
+  display: flex;
+}
+.resumecontain {
+  margin-left: 2rem;
+}
+.resumecontain h2 {
+  padding-top: 0.5rem;
+  color: var(--accent-color);
+  font-size: 20px;
+  font-family: var(--default-font);
+  letter-spacing: 2px;
+}
+
+.resumecontain h3 {
+  padding-top: 0.5rem;
+}
+
+.resumecontain h5 {
+  line-height: 18px;
+  letter-spacing: 1px;
+  padding-top: 0.5rem;
+  font-family: var(--default-font);
+}
+
+.resumecontain p {
+  padding-top: 0.5rem;
+  line-height: 24px;
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 1000px) {
+  .resume {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: var(---plpc);
+    padding-right: var(---prpc);
+  }
+
+  .resumeTwo {
+    padding-top: 8rem;
+  }
+}
+
+/* @media screen and (min-width: 1000px) 
+and (max-width: 1100px) {
+  .linetwomobile{
+    height: 540px;
+  }
+
+
+} */
+
+@media screen and (max-width: 600px) {
+  .resume {
+    padding-left: var(--plm);
+    padding-right: var(--prm);
+  }
+
+  .line {
+    width: 3px;
+    background: #34b7a7;
+
+    border-radius: 3px;
+    height: 340px;
+    margin-left: 6px;
+  }
+  .resumeTwo {
+    padding-top: 4rem;
+  }
+  .linetwomobile {
+    width: 3px;
+    background: var(--accent-color);
+
+    border-radius: 3px;
+    height: 500px;
+    margin-left: 6px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 700px) {
+  .line {
+    width: 3px;
+    background: #34b7a7;
+
+    border-radius: 3px;
+    height: 380px;
+    margin-left: 6px;
+  }
+}
+/* 
+   ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+   ❤️                                ❤️
+   ❤️    finish the container and start the section tow❤️
+   ❤️                                ❤️
+   ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+*/
+.surgery {
+  padding-top: 0rem;
+}
+.surgery h1 {
+  text-align: center;
+  color: #34b7a7;
+  margin-top: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.surgeryImg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  padding-left: var(---plpc);
+  padding-right: var(---prpc);
+  background: var(--background-gray);
+  width: 100%;
+  flex-wrap: wrap;
+}
+.surgeryImg {
+  width: 100%;
+}
+.surgeryImg img {
+  min-width: 300px;
+  width: 33%;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+  .surgery h1 {
+    padding-left: var(---plpc);
+    padding-right: var(---prpc);
+  }
+
+  .surgeryImg img {
+    padding-top: 0.5rem;
+    min-width: 300px;
+    width: 49%;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .surgery h1 {
+    padding-left: var(--plm);
+    padding-right: var(--prm);
+  }
+  .surgeryImg {
+    padding-left: var(--plm);
+    padding-right: var(--prm);
+  }
+
+  .surgeryImg img {
+    padding-top: 0.5rem;
+    min-width: 300px;
+    width: 99%;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 760px) {
+  .surgery h1 {
+    padding-left: var(---plpc);
+    padding-right: var(---prpc);
+  }
+  .surgeryImg {
+    padding-left: var(---plpc);
+    padding-right: var(---prpc);
+  }
+}
+
+/* 
+   ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+   ❤️                                ❤️
+   ❤️    finish the container and start the section tow❤️
+   ❤️                                ❤️
+   ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+*/
+
+/* /i should fix the probllme of the img in width mobile  */
+
+/* The Modal */
+
+@media (max-width: 768px) {
+  .modal {
+    display: none !important;
+  }
+
+  .surgeryImg img {
+    cursor: default; /* Change cursor to indicate no action */
+  }
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  border-radius: 8px;
+}
+
+.modal img {
+  margin-top: 4rem;
+}
+
+/* 
+   ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+   ❤️                                ❤️
+   ❤️          appointment                      ❤️
+   ❤️                                ❤️
+   ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+*/
+.appointment {
+  text-align: center;
+  margin-top: 2rem;
+  padding-left: var(---plpc);
+  padding-right: var(---prpc);
+  background-color: #34b7a7;
+  color: #ffffff;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.appointment h1 {
+  font-size: 28px;
+}
+
+.appointment p {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 0.5rem;
+  letter-spacing: 1.5px;
+  /* list-style: 28px; */
+}
+.appointment button {
+  margin-top: 0.8rem;
+  padding: 0.7rem 1.4rem;
+  border: white 2px solid;
+  background: transparent;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 1.4px;
+}
+.appointment button:hover {
+  transition: all 0.5s;
+  background-color: #ffffff;
+  color: #34b7a7;
+}
+
+@media screen and (max-width: 600px) {
+  .appointment p {
+    width: 100%;
+  }
+  .appointment {
+    padding-left: var(--plm);
+    padding-right: var(--prm);
+  }
+}
+
+/* 
+   ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+   ❤️                                ❤️
+   ❤️      contact                      ❤️
+   ❤️                                ❤️
+   ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+*/
+
+
+.contact {
+  background-color: var(--background-color);
+  padding-top: 2rem;
+  padding-left: var(--plm);
+  padding-right: var(--prm);
+}
+
+.contactone p {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+.contactone p span i:hover {
+  transition: all 0.5s;
+  color: var(--accent-color);
+}
+
+.contactone p .fix {
+  font-family: sans-serif;
+  font-weight: 400;
+}
+.contactwo {
+  text-align: center;
+}
+.contactwo input,
+textarea {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--accent-color);
+  
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contactdivone input:focus {
+  border-color: var(--accent-color);
+}
+.contactwo button {
+  margin-top: 0.8rem;
+  padding: 0.7rem 1.4rem;
+  border: var(--default-color) 2px solid;
+  background: var(--accent-color);
+  color: var(--background-color);
+  font-size: 16px;
+  letter-spacing: 1.4px;
+ 
+  /* width: 200px; */
+}
+button:hover {
+  transition: ease-in-out 0.5s;
+  background-color: transparent;
+  color: var(--default-color);
+}
+
+
+/*  */
+
+@media screen and (min-width: 600px) and 
+(max-width: 900px) {
+
+.contact{
+  padding-left: var(---plpc);
+  padding-right: var(---prpc);
+}
+
+}
+
+
+@media screen and (min-width: 900px) {
+
+.contact{
+  display: flex;
+  justify-content: space-between;
+  padding-left: var(---plpc);
+  padding-right: var(---prpc);
+}
+
+ 
+
+}
+
+/* 
+   ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+   ❤️                                ❤️
+   ❤️    finish the container and start the section tow❤️
+   ❤️                                ❤️
+   ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+*/
+
+.finish{
+  height: 2rem;
+}
